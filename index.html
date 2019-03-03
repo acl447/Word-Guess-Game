@@ -3,176 +3,56 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Rock Paper Scissors Part 2
+  <title>Word Guess Game
   </title>
+  
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </head>
 
 <body>
 
-  <div id="game">
+  <div class="container" id="game">
+    <div class="row">
 
-    <h2 id="userGuess">User Guess: </h2>
+        <h2 class="col-12">Press any key to get started!</h2>
+    </div>
+    <div class="row">
+        
+        <h2 class="col-12" id="wins">Wins: </h2>
+    </div>
+    <div class="row">
+        
+      <h2 class="col-12" id="current">Current Word: </h2>
 
-    <h2 id="computerGuess">Computer Guess: </h2>
 
-    <h2 id="wins">Wins: </h2>
 
-    <h2 id="losses">Losses: </h2>
+    </div>
+    <div class="row">
 
-    <h2 id="ties">Ties: </h2>
+      <h2 class="col-12" id="blanks"></h2>
+    </div>
+    <div class="row">
+
+      <h2 class="col-12" id="remaining">Number of Guesses Remaining: </h2>
+    </div>
+    <div class="row">
+
+      <h2 class="col-12" id="numberRemaining">12</h2>
+
+    </div>
+    <div class="row">
+
+      <h2 class="col-12" id="alreadyGuessed">Letters Already Guessed: </h2>
+    </div>
+
+    
 
   </div>
 
-  <script type="text/javascript">
 
-    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices = ["r", "p", "s"];
 
-    // This function is run whenever the user presses a key.
-    document.onkeyup = function(event) {
-
-      // Determines which key was pressed.
-      var userGuess = event.key;
-
-      // Randomly chooses a choice from the options array. This is the Computer's guess.
-      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-      // Alerts the key the user pressed (userGuess).
-      alert("User guess: " + userGuess);
-
-      // Alerts the Computer's guess.
-      alert("Computer guess: " + computerGuess);
-
-      var winner = "";
-
-      function RPS(computerGuess, userGuess) {
-
-        if (computerGuess === "r" && userGuess === "p") {
-
-          winner = "winner: p";
-
-          console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-
-
-        }
-
-        else if (computerGuess === "r" && userGuess === "s") {
-
-          winner = "winner: r";
-
-          console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-        }
-
-        else if (computerGuess === "p" && userGuess === "s") {
-
-          winner = "winner: s";
-
-          console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-
-      }
-
-      else if (computerGuess === "s" && userGuess === "p") {
-
-          winner = "winner: s";
-
-          console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-
-
-
-
-      }
-
-
-      else if (computerGuess === "p" && userGuess === "r") {
-
-        winner = "winner: p";
-
-        console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-
-
-      }
-
-      else if (computerGuess === "s" && userGuess === "r") {
-
-        winner = "winner: r";
-
-        console.log(winner);
-
-        document.getElementById("userGuess").innerHTML = userGuess;
-
-        document.getElementById("computerGuess").innerHTML = computerGuess;
-
-        document.getElementById("wins").innerHTML = ;
-
-
-
-          document.getElementById("game").innerHTML = winner;
-
-
-
-
-
-
-      }
-
-      else if (computerGuess === "s" && userGuess === "s") {
-
-
-        winner = "tie";
-
-        console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-
-        
-
-
-
-      }
-
-      else if (computerGuess === "p" && userGuess === "p") {
-
-
-          winner = "tie";
-
-          console.log(winner);
-
-          document.getElementById("game").innerHTML = winner;
-
-
-
-      }
-
-      else if (computerGuess === "r" && userGuess === "r") {
-
-        winner = "tie";
-
-        console.log(winner);
-
-        document.getElementById("game").innerHTML = winner;
-
-
-
-      }
-
-      
-
-    };
-
-    RPS(computerGuess, userGuess);
-
-  } </script>
-
+    
 </body>
 
 </html>
