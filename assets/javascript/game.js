@@ -1,4 +1,20 @@
-window.onload = function pickWord () {
+window.onload = function () {
+
+
+document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ _";
+
+document.getElementById("numberRemaining").innerHTML = 12;
+
+document.getElementById("lettersGuessed").innerHTML = "";
+
+
+
+
+};
+
+
+
+/*function pickWord () {
     
     var words = [
     "beatles",
@@ -28,12 +44,12 @@ window.onload = function pickWord () {
     
 
     
-    };
+    }; 
 
 
 
 
-};
+}; */
 
 
 
@@ -58,9 +74,11 @@ numberRemaining = 12;
 
 alreadyGuessed = "";
 
-
+document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ _";
 
 document.getElementById("lettersGuessed").innerHTML = "";
+
+document.getElementById("wins").innerHTML = 0;
     
 };
 
@@ -80,7 +98,7 @@ document.onkeyup = function wordGuess(event) {
     //var beatlesLetterArray = ["b", "B", "e", "E", "a", "A", "t", "T", "l", "L", "s", "S"];
    
 
-    function pickWord () {
+    /*function pickWord () {
     
         var words = [
         "beatles",
@@ -104,7 +122,7 @@ document.onkeyup = function wordGuess(event) {
         }
 
         return pickWord;
-    };
+    }; */
 
     if (document.getElementById("numberRemaining").innerHTML > 0) {
 
@@ -123,9 +141,9 @@ document.onkeyup = function wordGuess(event) {
         
         console.log(resetGame);
         
-        pickWord();
+        /*pickWord();
         
-        console.log(pickWord);
+        console.log(pickWord); */
         
     }; 
 
@@ -149,50 +167,59 @@ document.onkeyup = function wordGuess(event) {
 
    
 
-    if (document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") {
+    if ((document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") && (userGuess === "b")) 
 
 
-        if (userGuess === "b") {
+    {
     
     
-            document.getElementById("blanks").innerHTML = "B _ _ _ _ _ _";
+        document.getElementById("blanks").innerHTML = "B _ _ _ _ _ _";
     
     
-        } 
+    } 
         
-        else if (userGuess === "e") {
+    else if ((document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") && (userGuess === "e")) 
     
-            document.getElementById("blanks").innerHTML = "_ e _ _ _ e _";
+    {
     
-        }
-
-        else if (userGuess === "a") {
-
-
-            document.getElementById("blanks").innerHTML = "_ _ a _ _ _ _";
-    
-    
-        }
-    
-        else if (userGuess === "t") {
-    
-            document.getElementById("blanks").innerHTML = "_ _ _ t _ _ _";
-    
-        }
-    
-        else if (userGuess === "l") {
-    
-            document.getElementById("blanks").innerHTML = "_ _ _ _ l _ _";
-    
-        }
-
-        else if (userGuess === "s") {
-
-            document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ s";
-    
-        }
+        document.getElementById("blanks").innerHTML = "_ e _ _ _ e _";
     
     }
+
+    else if ((document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") && (userGuess === "a")) 
+    
+    {
+
+
+        document.getElementById("blanks").innerHTML = "_ _ a _ _ _ _";
+    
+    
+    }
+    
+    else if ((document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") && (userGuess === "t")) 
+    
+    {
+    
+        document.getElementById("blanks").innerHTML = "_ _ _ t _ _ _";
+    
+    }
+    
+    else if ((document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") && (userGuess === "l")) 
+    
+    {
+    
+        document.getElementById("blanks").innerHTML = "_ _ _ _ l _ _";
+    
+    }
+
+    else if ((document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ _") && (userGuess === "s")) 
+    
+    {
+
+        document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ s";
+    
+    }
+    
 
     else if ((document.getElementById("blanks").innerHTML === "B _ _ _ _ _ _") && (userGuess === "e")
         || (document.getElementById("blanks").innerHTML === "_ e _ _ _ e _") && (userGuess === "b")) 
@@ -260,6 +287,8 @@ document.onkeyup = function wordGuess(event) {
     
         document.getElementById("blanks").innerHTML === "_ e _ t _ e _";
     }
+
+
     
     else if ((document.getElementById("blanks").innerHTML = "_ e _ _ _ e _") && (userGuess === "l")
         || (document.getElementById("blanks").innerHTML = "_ _ _ _ l _ _") && (userGuess === "e"))
@@ -347,7 +376,7 @@ document.onkeyup = function wordGuess(event) {
    
     else if ((document.getElementById("blanks").innerHTML === "B e _ _ _ e _") && (userGuess === "a")
         || (document.getElementById("blanks").innerHTML === "B _ a _ _ _ _") && (userGuess === "e")
-        || (document.getElementById("blanks").innerHTML === "_ e a _ _ e _") && (userGuess === "b")) 
+       || (document.getElementById("blanks").innerHTML === "_ e a _ _ e _") && (userGuess === "b")) 
         
     {
     
@@ -866,8 +895,9 @@ document.onkeyup = function wordGuess(event) {
 
 
         document.getElementById("blanks").innerHTML = "B e a t l e s";
+        document.getElementById("wins").innerHTML++;
 
-    }
+    } 
 
 
 
