@@ -79,6 +79,8 @@ document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ _";
 document.getElementById("lettersGuessed").innerHTML = "";
 
 document.getElementById("wins").innerHTML = 0;
+
+alert("You lost. Try again!")
     
 };
 
@@ -280,8 +282,8 @@ document.onkeyup = function wordGuess(event) {
     
        
     
-    else if ((document.getElementById("blanks").innerHTML = "_ e _ _ _ e _") && (userGuess === "t")
-        || (document.getElementById("blanks").innerHTML = "_ _ _ t _ _ _") && (userGuess === "e"))
+    else if ((document.getElementById("blanks").innerHTML === "_ e _ _ _ e _") && (userGuess === "t")
+        || (document.getElementById("blanks").innerHTML === "_ _ _ t _ _ _") && (userGuess === "e"))
             
     {
     
@@ -290,8 +292,8 @@ document.onkeyup = function wordGuess(event) {
 
 
     
-    else if ((document.getElementById("blanks").innerHTML = "_ e _ _ _ e _") && (userGuess === "l")
-        || (document.getElementById("blanks").innerHTML = "_ _ _ _ l _ _") && (userGuess === "e"))
+    else if ((document.getElementById("blanks").innerHTML === "_ e _ _ _ e _") && (userGuess === "l")
+        || (document.getElementById("blanks").innerHTML === "_ _ _ _ l _ _") && (userGuess === "e"))
     
     {
     
@@ -299,8 +301,8 @@ document.onkeyup = function wordGuess(event) {
     
     }
     
-     else if ((document.getElementById("blanks").innerHTML = "_ e _ _ _ e _") && (userGuess === "s")
-        || (document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ s") && (userGuess === "e")) 
+     else if ((document.getElementById("blanks").innerHTML === "_ e _ _ _ e _") && (userGuess === "s")
+        || (document.getElementById("blanks").innerHTML === "_ _ _ _ _ _ s") && (userGuess === "e")) 
         
     {
     
@@ -895,7 +897,9 @@ document.onkeyup = function wordGuess(event) {
 
 
         document.getElementById("blanks").innerHTML = "B e a t l e s";
-        document.getElementById("wins").innerHTML++;
+        document.getElementById("wins").innerHTML= 1;
+        alert("You win!");
+        
 
     } 
 
