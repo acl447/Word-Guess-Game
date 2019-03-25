@@ -62,41 +62,32 @@ document.getElementById("lettersGuessed").innerHTML = wrongGuesses.join(" ");
 
 };
 
+
 //this function will check whether user guesses letter correctly or not
+function checkLetters(letter) {
+
+
+    //this boolean will be toggled based on whether or not a user letter is found anywhere in the word
+    var letterInWord = false;
+
+
+
+
+
+}
 
 
 
 
 
 
+   
 
+    
 
+    
 
-
-
-
-
-
-
-var alreadyGuessed = "";
-
-var numberRemaining = 12;
-
-console.log(numberRemaining);
-
-
-
-function resetGame() {
-
-    document.getElementById("numberRemaining").innerHTML = 12;
-
-    numberRemaining = 12;
-
-    alreadyGuessed = "";
-
-    document.getElementById("blanks").innerHTML = "_ _ _ _ _ _ _";
-
-    document.getElementById("lettersGuessed").innerHTML = "";
+   
 
     document.getElementById("wins").innerHTML = 0;
 
