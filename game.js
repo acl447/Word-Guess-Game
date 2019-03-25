@@ -51,10 +51,10 @@ function startGame() {
     }
 
     //shows 10 guesses left on page
-    document.getElementById("guesses-left").innerHTML = numGuesses;
+    document.getElementById("numberRemaining").innerHTML = numGuesses;
 
     // Prints the blanks at the beginning of each round in the HTML
-    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
 
     // Clears the wrong guesses from the previous round
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
@@ -71,7 +71,7 @@ function checkLetters(letter) {
     var letterInWord = false;
 
     //check if a user letter matches any in the array of letters in chosen word
-    for (var i = 0; i < numBlanks; i++) {
+    for (var i = 0; i < lettersInChosenWord.length; i++) {
 
         if (chosenWord[i] === letter) {
 
@@ -84,7 +84,7 @@ function checkLetters(letter) {
     if (letterInWord) {
 
 
-        for (var j = 0; j < numBlanks; j++) {
+        for (var j = 0; j < lettersInChosenWord.length; j++) {
 
             if (chosenWord[j] === letter) {
 
@@ -112,10 +112,10 @@ function roundComplete() {
 
 
     //update number of guesses remaining on page
-    document.getElementById("guesses-left").innerHTML = numGuesses;
+    document.getElementById("numberRemaining").innerHTML = numGuesses;
 
     //update blanks and correct guesses on page
-    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
 
     //update wrong guesses on page
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
@@ -128,7 +128,7 @@ function roundComplete() {
         alert("You win!");
 
         //update wins on page and restart game
-        document.getElementById("win-counter").innerHTML = wins;
+        document.getElementById("wins").innerHTML = wins;
         startGame();
     }
     //if user has run out of guesses
@@ -141,7 +141,7 @@ function roundComplete() {
 
         //update losses on page and restart game
 
-        document.getElementById("loss-counter").innerHTML = losses;
+        document.getElementById("losses").innerHTML = losses;
         startGame();
 
     }
