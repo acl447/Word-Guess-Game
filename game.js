@@ -51,13 +51,13 @@ function startGame() {
     }
 
     //shows 10 guesses left on page
-    document.getElementById("numberRemaining").innerHTML = numGuesses;
+    document.getElementById("guesses-left").innerHTML = numGuesses;
 
     // Prints the blanks at the beginning of each round in the HTML
-    document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
 
     // Clears the wrong guesses from the previous round
-    document.getElementById("lettersGuessed").innerHTML = wrongGuesses.join(" ");
+    document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
 
 
 };
@@ -112,13 +112,13 @@ function roundComplete() {
 
 
     //update number of guesses remaining on page
-    document.getElementById("numberRemaining").innerHTML = numGuesses;
+    document.getElementById("guesses-left").innerHTML = numGuesses;
 
     //update blanks and correct guesses on page
-    document.getElementById("blanks").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
 
     //update wrong guesses on page
-    document.getElementById("lettersGuessed").innerHTML = wrongGuesses.join(" ");
+    document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
 
     //if all letters user chooses match letters in chosenWord
     if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
@@ -128,7 +128,7 @@ function roundComplete() {
         alert("You win!");
 
         //update wins on page and restart game
-        document.getElementById("wins").innerHTML = wins;
+        document.getElementById("win-counter").innerHTML = wins;
         startGame();
     }
     //if user has run out of guesses
@@ -141,7 +141,7 @@ function roundComplete() {
 
         //update losses on page and restart game
 
-        document.getElementById("losses").innerHTML = losses;
+        document.getElementById("loss-counter").innerHTML = losses;
         startGame();
 
     }
