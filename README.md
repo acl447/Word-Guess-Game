@@ -6,7 +6,7 @@ This game is a fun way to test your knowledge of 1960s artists. Just press any k
 
 Keep guessing what the missing letters in the word are:
 
-<img width="740" alt="Screen Shot 2019-05-06 at 4 36 56 PM" src="https://user-images.githubusercontent.com/44036798/57261601-3f4ec480-701d-11e9-8900-e53096fe8bce.png">
+<img width="648" alt="Screen Shot 2019-05-06 at 4 40 54 PM" src="https://user-images.githubusercontent.com/44036798/57262216-0d8b2d00-7020-11e9-9dfe-9f4ae8337435.png">
 
 Once you've filled in all the letters in the word, you win!
 
