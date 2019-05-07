@@ -16,7 +16,7 @@ Technologies used to make this app are HTML5, Bootstrap and JavaScript.
 
 Link to deployed project on GitHub Pages: https://acl447.github.io/Word-Guess-Game/
 
-To make this app, I first designed it so there was an area where the blanks in the word and letters guessed correctly would be displayed, an area where wrong guesses would be displayed, and an area where the number of guesses remaining would be displayed. I populated these areas dynamically using JavaScript functions. 
+To make this app, I first designed it so there were areas where blanks in the word and letters guessed correctly, wrong guesses, the number of guesses remaining, and the numbers of wins and losses, would be displayed. I populated these areas dynamically using JavaScript functions. 
 
 I used a function to randomly choose a word from an array of 1960s artist names. The user will guess the randomly chosen word. I used another function to check whether or not the letter the user has guessed matches any letter in the chosen word. I used the JavaScript "document.onkeyup" to capture when the user presses a key. 
 
